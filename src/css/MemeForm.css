@@ -1,0 +1,37 @@
+/* Meme Form */
+
+#App_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  
+  #input_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .input {
+    height: 35px;
+    width: 250px;
+    margin: 15px 15px;
+    border: 1px solid #D5D4D8;
+    border-radius: 5px;
+    text-indent: 10px;
+  }
+  
+  .submit_button {
+    height: 40px;
+    width: 95%;
+    border: 1px solid #D5D4D8;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 1rem;
+  }
+  
+  .submit_button:hover {
+    background: linear-gradient(to right, #882caa, #b539e2);
+  }

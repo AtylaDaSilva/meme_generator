@@ -1,0 +1,22 @@
+/*Header*/
+
+#App_header {
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0px 30px
+  }
+  
+  #brand_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /*Troll face*/
+  #brand_logo {
+    height: 50px;
+    margin-right: 10px;
+  }

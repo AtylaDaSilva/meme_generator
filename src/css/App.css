@@ -1,0 +1,21 @@
+/*Body*/
+
+.App_body {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.bg_gradient_purple {
+  background: linear-gradient(to right, #672280, #A626D3);
+}
+
+.box {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000000;
+  display: inline-block;
+  margin: 5px 0px 5px 0px;
+}
