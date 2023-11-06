@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 //Components
 import Header from './components/Header';
-import MemeForm from './components/MemeForm';
+import Sidebar from './components/Sidebar';
 import MemeContainer from './components/MemeContainer';
 
 //CSS
@@ -13,7 +13,7 @@ import './css/App.css';
  * Fetches an array of memes from "https://api.imgflip.com/get_memes" and displays a pseudo-random meme from that array. Also allows the user to type in some text as meme headers.*/
 function App() {
   /**Updates State when any change happens in one of the form inputs */
-  function handleChange(event) { 
+  function handleChange(event) { //============================ LEGACY
     const { name, value } = event.target;
     
     setMemeState(currentState => {
@@ -25,7 +25,7 @@ function App() {
   }
 
   /**Handles form submissions */
-  function handleSubmit(event) { 
+  function handleSubmit(event) { //============================ LEGACY
     event.preventDefault();
 
     setMemeState(currentState => { 
@@ -34,6 +34,19 @@ function App() {
         memeURL: getRandomMemeURL(memesArray)
       });
     });
+  }
+
+  function handleMemeSelectorChange(event) {
+    const newURL = event.target.value;
+
+    if (newURL) { 
+      setMemeState(currentState => { 
+        return ({
+          ...currentState,
+          memeURL: newURL
+        })
+      })
+    }
   }
 
   /**Returns a pseudo-random url from memesArray, assuming that memesArray is an array of objects and each object in that array contains a 'url' property.*/
@@ -91,18 +104,18 @@ function App() {
   /* Render */
   return (
     <div className="App">
-      <Header />
+      <div className='App-header'>
+        <Header />
+      </div>
 
-      <div className='App_body'>
-        <MemeForm
-          memeState={ memeState }
-          handleChange={ handleChange }
-          handleSubmit={ handleSubmit }
-        />
+      <div className='App-body d-flex align-items-center justify-content-start'>
+        <Sidebar memesArray={memesArray} callbacks={{setMemeState, handleMemeSelectorChange, getRandomMemeURL}} />
 
-        <MemeContainer
-          memeState={ memeState }
-        />
+        <div className='main-content flex-grow-1 d-flex justify-content-center'>
+          <MemeContainer
+            memeState={memeState}
+          />
+        </div>
       </div>
     </div>
   );

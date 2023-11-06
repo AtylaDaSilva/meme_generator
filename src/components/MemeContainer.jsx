@@ -7,21 +7,13 @@ import '../css/MemeContainer.css';
 /**Meme image container. Displays the meme image and the text (if any) inserted in the inputs inside MemeForm.*/
 export default function MemeContainer(props) {
     return (
-        <div id='meme_container'>
-            <span
-                id='upperMemeHeader'
-                className='memeHeader'
-            > { props.memeState.upperHeader } </span>
+        <div id='meme_container' className='border-purple-dark rounded'>
           <img
             id='meme'
-            className='contain_image'
+            className='object-fit-contain'
             src={ props.memeState.memeURL }
             alt='Meme Image'
           ></img>
-          <span
-            id='bottomMemeHeader'
-            className='memeHeader'
-          >{ props.memeState.bottomHeader }</span>
         </div>
     );
 }

@@ -1,15 +1,15 @@
 /*Body*/
 
-.App_body {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
+.bg-gradient-purple {
+  background: linear-gradient(to right, #672280, #A626D3);
 }
 
-.bg_gradient_purple {
-  background: linear-gradient(to right, #672280, #A626D3);
+.bg-purple-dark {
+  background-color: #672280;
+}
+
+.border-purple-dark {
+  border: 1px solid #672280;
 }
 
 .box {

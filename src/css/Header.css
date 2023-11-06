@@ -1,12 +1,12 @@
 /*Header*/
 
-#App_header {
+#Header {
     color: #ffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
-    padding: 0px 30px
+    height: 65px;
+    padding: 0px 30px 0px 10px;
   }
   
   #brand_container {
@@ -17,6 +17,6 @@
   
   /*Troll face*/
   #brand_logo {
-    height: 50px;
+    height: 45px;
     margin-right: 10px;
   }

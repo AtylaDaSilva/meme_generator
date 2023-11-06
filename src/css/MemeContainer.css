@@ -1,15 +1,10 @@
 /* Meme Container */
 
 #meme_container {
-    height: 60vh;
+    height: 70vh;
     width: 60vw;
     display: flex;
     justify-content: center;
-    position: relative;
-}
-
-.contain_image {
-    height: 100%;
 }
 
 .memeHeader {

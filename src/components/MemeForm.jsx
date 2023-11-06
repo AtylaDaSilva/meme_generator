@@ -27,7 +27,7 @@ export default function MemeForm(props) {
             </input>
         </div>
 
-        <button className='submit_button bg_gradient_purple'>Get a New Meme Image 🖼️</button>
+        <button className='submit_button bg-gradient-purple'>Get a New Meme Image 🖼️</button>
     </form>
     );
 }
